@@ -1,0 +1,15 @@
+# Needed for the Clever Cloud's application deployment
+listen_address = "0.0.0.0:8080"
+
+[[runners]]
+# Change these parameters following your Gitlab runner's configuration
+# Runner advanced configuration: https://docs.gitlab.com/runner/configuration/advanced-configuration.html
+name = "GITLAB_RUNNER_NAME"
+url = "GITLAB_INSTANCE_URL"
+token = "GITLAB_RUNNER_TOKEN"
+executor = "docker"
+
+[runners.docker]
+# Configure your runner, you can use any Linux x86_64 image
+# Docker executor configuration: https://docs.gitlab.com/runner/executors/docker.html#use-the-docker-executor
+image = "ubuntu:latest"
